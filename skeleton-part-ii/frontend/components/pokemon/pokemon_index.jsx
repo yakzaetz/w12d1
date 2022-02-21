@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from "react-router-dom";
 import PokemonIndexItem from './pokemon_index_item';
 
 class PokemonIndex extends React.Component{
@@ -11,8 +12,9 @@ class PokemonIndex extends React.Component{
   }
   
   render(){
+    <Route path={`/pokemon/${this.props.match.params.pokemonId}`}/>
     return (
-    <section className="pokedex">
+      <section className="pokedex">
       <ul>
       {this.props.pokemon.map((poke) => (
         <PokemonIndexItem key={poke.id} pokemon={poke} />
@@ -20,7 +22,7 @@ class PokemonIndex extends React.Component{
       </ul>
     </section>
     )
-  }
+    }
   }
   
   

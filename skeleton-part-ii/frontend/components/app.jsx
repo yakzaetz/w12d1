@@ -4,6 +4,7 @@ import PokemonIndexContainer from './../components/pokemon/pokemon_index_contain
 
 const App = () => (
     <Route path="/" component={PokemonIndexContainer} />
+    // <Route path="/" component={PokemonIndexContainer} />
 ) 
 
 export default App;
